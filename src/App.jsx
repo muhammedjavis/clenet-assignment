@@ -4,6 +4,7 @@ import RootLayout from './components/RootLayout';
 import AboutUs from './components/AboutUs';
 import Blogs from './components/Blogs';
 import LogoGallery from './components/LogoGallery';
+import { ThemeProvider } from '../store/ContrastContext';
 
 const router = createBrowserRouter([
   {
@@ -33,7 +34,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-      <RouterProvider router={router} />
+      <ThemeProvider>
+        <RouterProvider router={router} />
+      </ThemeProvider>
     </>
   );
 }

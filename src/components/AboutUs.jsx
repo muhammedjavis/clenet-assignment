@@ -1,12 +1,20 @@
 import { Container, Typography, Button, Grid } from '@mui/material';
+import { useContext } from 'react';
+import { ThemeContext } from '../../store/ContrastContext';
 
 export default function AboutUs() {
+  const { isHighContrast } = useContext(ThemeContext);
   return (
     <Container maxWidth='md'>
       <Typography variant='h4'>About Us</Typography>
       <Grid container alignItems='center' spacing={2}>
         <Grid item>
-          <Button variant='contained'>Download now!</Button>
+          <Button
+            variant='contained'
+            color={isHighContrast ? 'warning' : 'secondary'}
+          >
+            Download now!
+          </Button>
         </Grid>
       </Grid>
 

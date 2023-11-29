@@ -6,13 +6,15 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Link from '@mui/material/Link';
 import { NavLink, useLocation } from 'react-router-dom';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { ThemeContext } from '../../store/ContrastContext';
 
 function Header({ sections }) {
   const activeColor = '#ADD8E6';
   const location = useLocation();
   const isMobile = useMediaQuery('(max-width:600px)');
   const [anchorEl, setAnchorEl] = useState(null);
+  const { isHighContrast, toggleContrast } = useContext(ThemeContext);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -32,8 +34,20 @@ function Header({ sections }) {
           justifyContent: 'space-between',
         }}
       >
-        <Button size='small'>High/Low Contrast</Button>
-        <Button variant='contained' size='small' onClick={handleClick}>
+        <Button
+          size='small'
+          variant='contained'
+          color={isHighContrast ? 'warning' : 'secondary'}
+          onClick={toggleContrast}
+        >
+          High/Low Contrast
+        </Button>
+        <Button
+          variant='contained'
+          color={isHighContrast ? 'warning' : 'secondary'}
+          size='small'
+          onClick={handleClick}
+        >
           <NavLink
             to='/login'
             style={{ textDecoration: 'none', color: 'inherit' }}
