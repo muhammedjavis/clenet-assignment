@@ -119,7 +119,7 @@ export default function Login() {
                   </Link>
                 </Grid>
               </Grid>
-              <NavLink to='/'>
+              <NavLink to='/aboutus'>
                 <Button
                   type='submit'
                   fullWidth

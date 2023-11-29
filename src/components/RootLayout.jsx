@@ -4,9 +4,10 @@ import Container from '@mui/material/Container';
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Header from './Header';
+import { Outlet } from 'react-router-dom';
 
 const sections = [
-  { title: 'About Us', url: '#' },
+  { title: 'About Us Template', url: '/aboutus' },
   { title: 'Blogs', url: '#' },
   { title: 'Logo Gallery', url: '#' },
 ];
@@ -20,6 +21,7 @@ export default function RootLayout() {
       <Container maxWidth='lg'>
         <Header sections={sections} />
       </Container>
+      <Outlet />
     </ThemeProvider>
   );
 }
