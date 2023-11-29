@@ -2,7 +2,7 @@
 
 
 
-Cloning the Repository to Local PC
+# Cloning the Repository to Local PC
 
   
   To clone this repository to your local machine, follow these steps:
@@ -14,7 +14,7 @@ Cloning the Repository to Local PC
 
   git clone https://github.com/muhammedjavis/clenet-assignment.git
 
-Setting up the Environment for the Server in Local
+# Setting up the Environment for the Server in Local
   
   Before running the application, make sure to set up the environment for the server by following these steps:
 
@@ -22,10 +22,10 @@ Setting up the Environment for the Server in Local
   Install dependencies using a package manager like npm or yarn:
 
   npm install
-  # or
+  or
   yarn install
 
-Running the Application Locally
+# Running the Application Locally
 
   To run the application on your local machine, follow these steps:
 
