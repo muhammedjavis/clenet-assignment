@@ -9,7 +9,7 @@ import { Outlet } from 'react-router-dom';
 const sections = [
   { title: 'About Us Template', url: '/aboutus' },
   { title: 'Blogs', url: '/blogs' },
-  { title: 'Logo Gallery', url: '#' },
+  { title: 'Logo Gallery', url: '/logo' },
 ];
 
 const defaultTheme = createTheme();
