@@ -8,7 +8,7 @@ import { Outlet } from 'react-router-dom';
 
 const sections = [
   { title: 'About Us Template', url: '/aboutus' },
-  { title: 'Blogs', url: '#' },
+  { title: 'Blogs', url: '/blogs' },
   { title: 'Logo Gallery', url: '#' },
 ];
 
