@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
-import { useMediaQuery } from '@mui/material';
+import { FormControlLabel, Switch, useMediaQuery } from '@mui/material';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Link from '@mui/material/Link';
@@ -34,14 +34,17 @@ function Header({ sections }) {
           justifyContent: 'space-between',
         }}
       >
-        <Button
-          size='small'
-          variant='contained'
-          color={isHighContrast ? 'warning' : 'secondary'}
-          onClick={toggleContrast}
-        >
-          High/Low Contrast
-        </Button>
+        <FormControlLabel
+          control={
+            <Switch
+              checked={isHighContrast}
+              onChange={() => toggleContrast(!!isHighContrast)}
+              color='primary'
+              inputProps={{ 'aria-label': 'toggle contrast' }}
+            />
+          }
+          label='High/Low Contrast'
+        />
         <Button
           variant='contained'
           color={isHighContrast ? 'warning' : 'secondary'}

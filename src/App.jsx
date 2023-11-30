@@ -9,22 +9,42 @@ import { ThemeProvider } from '../store/ContrastContext';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <RootLayout />,
-    children: [
-      {
-        path: '/aboutus',
-        element: <AboutUs />,
-      },
-      {
-        path: '/blogs',
-        element: <Blogs />,
-      },
-      {
-        path: '/logo',
-        element: <LogoGallery />,
-      },
-    ],
+    element: (
+      <>
+        <RootLayout />
+        <AboutUs />
+      </>
+    ),
   },
+
+  {
+    path: '/aboutus',
+    element: (
+      <>
+        <RootLayout />
+        <AboutUs />
+      </>
+    ),
+  },
+  {
+    path: '/blogs',
+    element: (
+      <>
+        <RootLayout />
+        <Blogs />
+      </>
+    ),
+  },
+  {
+    path: '/logo',
+    element: (
+      <>
+        <RootLayout />
+        <LogoGallery />
+      </>
+    ),
+  },
+
   {
     path: '/login',
     element: <Login />,
